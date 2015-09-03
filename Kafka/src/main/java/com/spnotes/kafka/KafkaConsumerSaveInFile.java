@@ -29,7 +29,7 @@ import java.text.SimpleDateFormat;
  * Original code by : Sunil Patil, https://github.com/pppsunil/HelloKafka/blob/master/src/main/java/com/spnotes/kafka/HelloKafkaConsumer.java
  * Modified by : Marianne Linhares Monteiro https://github.com/mari-linhares , 30 jun 2015
  */
-public class KafkaConsumerSetNialm extends  Thread {
+public class KafkaConsumerSaveInFile extends  Thread {
 
     final static String clientId = "SimpleConsumerDemoClient";
     final static String TOPIC = "<topic name>";
@@ -39,11 +39,11 @@ public class KafkaConsumerSetNialm extends  Thread {
     ConsumerConnector consumerConnector;
 
     public static void main(String[] argv) throws UnsupportedEncodingException {
-        KafkaConsumerSetNialm kafkaConsumer = new KafkaConsumerSetNialm();
+        KafkaConsumerSaveInFile kafkaConsumer = new KafkaConsumerSaveInFile();
        	kafkaConsumer.start();
     }
 
-    public KafkaConsumerSetNialm(){
+    public KafkaConsumerSaveInFile(){
         Properties properties = new Properties();
         properties.put("zookeeper.connect",ZOOKEEPER_IP + ":<zookeeper gate>");
         properties.put("group.id",GROUP_NAME);
@@ -71,7 +71,7 @@ public class KafkaConsumerSetNialm extends  Thread {
 	    	String todayDate = new SimpleDateFormat("dd-MM-yy").format(cal.getTime());
 	    	
 		//Message will be saved at: <today date>_<topic name>
-		File file = new File(todayDate + "_set-nialm");
+		File file = new File(todayDate + "_" + TOPIC);
 
 	 	// if file doesnt exists, then create it
 	    	if (!file.exists()) file.createNewFile();
