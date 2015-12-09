@@ -2,6 +2,7 @@
 
 
 Classes e scripts utilizados para realização de experimentos durante o PIBITI em 2015 no LSD/UFCG.
+Trabalho realizado por: Marianne Linhares, orientada por: Andrey Brito.
 
 ### PULSAROPENSTACK-AD - DISTRIBUTED PROCESSING OF DATA USING HADOOP AND OPENSTACK(SAHARA): AN USER'S POINT OF VIEW
 ## Abstract
